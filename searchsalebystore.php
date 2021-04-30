@@ -95,7 +95,7 @@
 				if(isset($_POST['search'])): ?>
 				<?php
 					$var = $_POST['id'];
-					$sqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($sqli));
+					$sqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($sqli));
 					$found = $sqli->query("SELECT
   																CONCAT(c.city, _utf8',', cy.country) AS store,
   																CONCAT(m.first_name, _utf8' ', m.last_name) AS manager,

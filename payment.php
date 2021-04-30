@@ -69,7 +69,7 @@
 <br>
 
   <?php
-        $mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+        $mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM payment") or die($mysqli->error);
   ?>
 
@@ -146,7 +146,7 @@
               <td><?php echo $row['staff_id']; ?></td>
               <td><?php echo $row['rental_id']; ?></td>
 							<td><?php echo $row['amount']; ?></td>
-							<td><?php echo $row['payment_id']; ?></td>
+							<td><?php echo $row['payment_date']; ?></td>
 							<td><?php echo $row['last_update']; ?></td>
               <td><center><a href="payment.php?edit=<?php echo $row['payment_id']; ?>" class="btn btn-info">Edit</a>
               <a href="payment.php?delete=<?php echo $row['payment_id']; ?>" class="btn btn-danger">Delete</a></center></td>

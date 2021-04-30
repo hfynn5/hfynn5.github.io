@@ -2,7 +2,7 @@
 
 session_start();
 
-$mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
 
 $update = false;
 $ID = 0;
@@ -15,7 +15,7 @@ if(isset($_POST['save'])){
     $lastname = $_POST['lastname'];
     $now = date('Y-m-d H:i:s');
 
-    $mysqli->query("INSERT INTO actor (actor_id,firstname,last_name,last_update) VALUES ('$ID','$name','$now')") or die($mysqli->error());
+    $mysqli->query("INSERT INTO actor (actor_id,first_name,last_name,last_update) VALUES ('$ID','$firstname','$lastname','$now')") or die($mysqli->error());
 
     $_SESSION['message'] = "Data Saved.";
     $_SESSION['msg_type'] = "success";

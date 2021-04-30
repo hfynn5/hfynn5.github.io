@@ -69,7 +69,7 @@
 <br>
 
   <?php
-        $mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+        $mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM rental") or die($mysqli->error);
   ?>
 

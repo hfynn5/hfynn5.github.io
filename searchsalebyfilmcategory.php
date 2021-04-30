@@ -68,7 +68,7 @@
 	</nav>
 <br>
 		<?php
-			$mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+			$mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
 			$result = $mysqli->query("SELECT * FROM category") or die($mysqli->error);
 			$rowcount=mysqli_num_rows($result);
 
@@ -108,7 +108,7 @@
 				if(isset($_POST['search'])): ?>
 				<?php
 					$var = $_POST['id'];
-					$sqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($sqli));
+					$sqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($sqli));
 					$found = $sqli->query("SELECT
   																c.name AS category,
   																SUM(p.amount) AS total_sales

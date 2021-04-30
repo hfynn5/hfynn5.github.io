@@ -68,7 +68,7 @@
 	</nav>
 <br>
 		<?php
-			$mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+			$mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
 			$result = $mysqli->query("SELECT * FROM category") or die($mysqli->error);
 			$rowcount=mysqli_num_rows($result);
 
@@ -111,7 +111,7 @@
 				if(isset($_POST['search'])): ?>
 				<?php
 					$var = $_POST['id'];
-					$sqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($sqli));
+					$sqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($sqli));
 					$found = $sqli->query("SELECT f.title,f.description,f.rental_rate,f.length,f.rating
 															   FROM film f,category c,film_category fc
 															   WHERE f.film_id = fc.film_id AND c.category_id = fc.category_id AND c.category_id = $var") or die($sqli->error());

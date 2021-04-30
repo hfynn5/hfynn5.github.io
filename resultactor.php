@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 $mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
 
 $update = false;
@@ -9,18 +7,12 @@ $ID = 0;
 $filmID ='';
 $storeID ='';
 
-if(isset($_POST['save'])){
-    $ID = $_POST['id'];
-    $filmID = $_POST['filmID'];
-    $storeID = $_POST['storeID'];
-    $now = date('Y-m-d H:i:s');
+if(isset($_POST['search'])){
 
-    $mysqli->query("INSERT INTO inventory (inventory_id,film_id,store_id,last_update) VALUES ('$ID','$filmID','$storeID','$now')") or die($mysqli->error());
-
-    $_SESSION['message'] = "Data Saved.";
-    $_SESSION['msg_type'] = "success";
-
-    header("location: inventory.php");
+    $found = $mysqli->query("SELECT f.title,f.description,f.rental_rate,f.length,f.rating
+                             FROM film f,category c,film_category fc
+                             WHERE f.film_id = fc.film_id AND c.category_id = fc.category_id AND c.category_id =$i") or die($mysqli->error());
+    header("location: searchactor.php");
 }
 
 if(isset($_GET['delete'])){

@@ -100,7 +100,8 @@
 				if(isset($_POST['search'])): ?>
 				<?php
 					$var = $_POST['id'];
-					$sqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($sqli));
+					$sqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($sqli));
+					
 					$found = $sqli->query("SELECT
 																	film.film_id AS FID,
   																film.title AS title,
@@ -117,7 +118,9 @@
   															JOIN actor ON film_actor.actor_id = actor.actor_id
 																WHERE film.film_id = $var") or die($sqli->error());
 
+		
         while($row = mysqli_fetch_array($found)): ?>
+		<?php echo test ?>
           <tr>
               <td><?php echo $row['FID']; ?></td>
               <td><?php echo $row['title']; ?></td>

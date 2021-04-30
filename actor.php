@@ -68,7 +68,7 @@
 <br>
 
   <?php
-        $mysqli = new mysqli('localhost','root','','coursework2') or die(mysqli_error($mysqli));
+        $mysqli = new mysqli('localhost','hfysi2mercury','doinyourmomdoindoinyourmom','hfysi2me_Coursework2') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM actor") or die($mysqli->error);
   ?>
 
@@ -93,11 +93,11 @@
       </div>
       <div class="form-group">
         <label>First Name</label>
-        <input type="text" name="first" class="form-control" value="<?php echo $firstname ?>" placeholder="Enter First Name">
+        <input type="text" name="firstname" class="form-control" value="<?php echo $firstname ?>" placeholder="Enter First Name">
       </div>
       <div class="form-group">
         <label>Last Name</label>
-        <input type="text" name="last" class="form-control" value="<?php echo $lastname ?>" placeholder="Enter Last Name">
+        <input type="text" name="lastname" class="form-control" value="<?php echo $lastname ?>" placeholder="Enter Last Name">
       </div>
       <div class="form-group">
         <?php
